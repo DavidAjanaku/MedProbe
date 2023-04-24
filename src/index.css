@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family:' acumin-pro ';
+    src: url(/static/font/acumin-pro-cufonfonts-webfont/Acumin-BdItPro.woff);
+    src: url(/static/font/acumin-pro-cufonfonts-webfont/Acumin-BdPro.woff);
+    src: url(/static/font/acumin-pro-cufonfonts-webfont/Acumin-ItPro.woff);
+    src: url(/static/font/acumin-pro-cufonfonts-webfont/Acumin-RPro.woff);
+}
