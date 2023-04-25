@@ -6,8 +6,6 @@ import SignUpPage from "./SignUpPage";
 function App() {
   return (
     <>
-    
-     
       <Router >
       <nav className="justify-between...  bg-indigo-500 ...">
         <Link to ="/">Home</Link>
