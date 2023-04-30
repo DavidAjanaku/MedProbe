@@ -51,14 +51,18 @@
   
 
 .dropdown-menu ul li{
-    padding: 10px  0;
+    padding: 10px  ;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
-  }
-  
-  .dropdown-menu ul li:hover a{
-    color: rgb(212, 33, 9);
     cursor: pointer;
   }
+
+
+  .dropdown-menu ul li:hover{
+    background: #edecec;
+
+  }
+  
+ 
   
   .dropdown-menu ul li:hover img{
     opacity: 1;
@@ -74,6 +78,7 @@
     max-width: 20px;
     margin-right: 10px;
     opacity: 0.5;
+    max-height: 20px;
     transition: var(--speed);
   }
   
