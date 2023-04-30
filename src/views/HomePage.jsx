@@ -9,12 +9,12 @@ export default function HomePage() {
 
   return (
     <>
-      {/* <nav className="justify-between...  bg-indigo-500 ...">
+      <nav className="justify-between...  bg-indigo-500 ...">
         <Link to="/">Sign Up</Link>
         <Link to="/Home">Home</Link>
-      </nav> */}
+      </nav>
        <Header/>
-      <div className="home-container bg-gray-100 p-3  mt-14  h-screen" >
+      <div className="home-container bg-gray-100 p-3  mt-4  h-screen" >
      
         
         <div className="grid grid-cols-5 gap-4 h-screen">
