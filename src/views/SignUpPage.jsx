@@ -1,5 +1,6 @@
 export default function SignUpPage() {
   return (
-    <div className='font-acumin'>SignUpPage</div>
+    <div className='font-acumin'>
+      SignUpPage</div>
   )
 }

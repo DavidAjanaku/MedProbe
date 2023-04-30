@@ -48,7 +48,7 @@ export default function profileHeader() {
           <DropdownItem img={user} text={"My Profile"} path="/profile"/>
           <DropdownItem img={settingsIcon} text={"Settings"}  path="/settings"/>
           <DropdownItem img={questionIcon} text={"Help Center"} path="/helpcenter"/>
-          <DropdownItem img={logoutIcon} text={"Logout"} />
+          <DropdownItem img={logoutIcon} text={"Logout"} path="/"/>
         </ul>
       </div>
     </div>
