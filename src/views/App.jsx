@@ -2,23 +2,21 @@ import "../App.css";
 import {BrowserRouter as Router,Routes,Route, Link} from "react-router-dom";
 import Home from "./HomePage"
 import SignUpPage from "./SignUpPage";
+import OtpPage from "./OtpPage";
 
 function App() {
   return (
     <>
       <Router >
-      <nav className="justify-between...  bg-indigo-500 ...">
-        <Link to ="/">Home</Link>
-        <Link to ="/Signup">Sign Up</Link>
-      
-
-      </nav>
+     
         <Routes>
-          <Route  path="/" element={<Home/>}/>
-          <Route  path="/Signup" element={<SignUpPage/>}/>
+          <Route  path="/" element={<SignUpPage/>}/>
+          <Route  path="/Home" element={<Home/>}/>
+          <Route  path="/otpPage" element={<OtpPage/>}/>
 
         </Routes>
       </Router>
+      
     </>
   );
 }
