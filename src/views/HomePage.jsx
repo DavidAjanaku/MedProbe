@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "./profileHeader";
+import Header from "./ProfileHeader";
 
 
 export default function HomePage() {
@@ -18,7 +18,7 @@ export default function HomePage() {
      
         
         <div className="grid grid-cols-5 gap-2 h-screen">
-          <div className=" bg-blue-500 rounded-xl  "></div>
+          <div className=" bg-blue-500 rounded-xl md:hidden "></div>
           <div className="bg-gray-200 rounded-xl col-span-2   col-span-4"></div>
         </div>
       </div>
