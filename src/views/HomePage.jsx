@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from "./profileHeader";
+import Header from "../components/ProfileHeader";
 
 
 export default function HomePage() {
