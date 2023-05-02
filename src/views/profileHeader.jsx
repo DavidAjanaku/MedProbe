@@ -6,7 +6,7 @@ import settingsIcon from "../assets/illustrations/settings.png";
 import logoutIcon from "../assets/illustrations/log-out.png";
 import questionIcon from "../assets/illustrations/question.png";
 
-export default function profileHeader() {
+export default function ProfileHeader() {
   const [open, setOpen] = useState(false);
   let menuRef = useRef();
 
