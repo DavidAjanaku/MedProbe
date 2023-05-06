@@ -32,7 +32,7 @@ export default function SignInPage() {
             </div>
 
             {/* 3. MAIN FORM  */}
-            <form className="flex flex-col my-20 ">
+            <form className="flex flex-col my-8  md:my-20 ">
               <span className="block text-sm font-medium text-medium-blue ">
                 Email
               </span>
