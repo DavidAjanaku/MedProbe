@@ -19,8 +19,8 @@ export default function HomePage() {
      
         
         <div className="grid grid-cols-5 gap-2 h-screen">
-          <div className=" bg-blue-500 rounded-xl  sidebar"></div>
-          <div className="bg-gray-200 rounded-xl col-span-2   col-span-4 main-section" >
+          <div className=" bg-blue-500 rounded-xl  sidebar  hidden md:block"></div>
+          <div className="bg-gray-200 rounded-xl col-span-2   col-span-5 main-section  md:col-span-4" >
 
           <SearchSection/>
           </div>
