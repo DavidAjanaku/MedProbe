@@ -14,7 +14,7 @@ export default function SignUpPage() {
             <p className="text-2xl text-text-blue">medProbe</p>
           </div>
           <img
-            src="/assets/illustrations/lady-searching.svg"
+            src="/assets/illustrations/man-searching.svg"
             alt="sign up image"
           />
         </div>
