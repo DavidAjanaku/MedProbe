@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import pageNotFound from '../assets/illustrations/404.jpeg'
+// import pageNotFound from '/public/assets/illustrations/404.jpeg'
 
 function ErrorPage() {
   return (

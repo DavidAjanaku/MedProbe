@@ -22,17 +22,15 @@ export default {
         italic: "italic",
       },
       colors: {
-        'regal-blue': '#243c5a',
+        "regal-blue": "#243c5a",
         white: "#f2f2f2",
         "dark-blue": "#101453",
         "medium-blue": "#7586d4",
         "light-blue": "#ced9f9",
-        'light-dark': '#f2f0f0',
+        "light-dark": "#f2f0f0",
+        "text-blue": "#0d1b2a",
+        'backBlue': '#778da9',
       },
-
-      
-
-
     },
   },
   plugins: [],
