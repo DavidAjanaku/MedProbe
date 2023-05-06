@@ -20,7 +20,7 @@ export default function SignInPage() {
         </div>
 
         {/* 2. FORM CONTAINER */}
-        <div className="main-form-container  my-16 mx-auto w-3/5">
+        <div className="main-form-container  my-16 mx-auto w-4/5  md:w-3/5">
           <div className="">
             <div className="flex flex-col items-center text-center">
               <h1 className="text-4xl font-extrabold text-medium-blue">
