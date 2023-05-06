@@ -3,7 +3,7 @@ export default function SignUpPage() {
     <div className="font-acumin main-container ">
       <div className="wrapper-container grid grid-cols-2 max-h-screen overflow-hidden">
         {/* 1. IMAGE CONTAINER */}
-        <div className="main-img-container bg-back hidden:md-block hidden:sm-block">
+        <div className="main-img-container bg-back hidden md:block">
           <div className="logo-div flex mx-20 my-4">
             <img
               src="/assets/illustrations/search (4).png"
