@@ -3,12 +3,12 @@ import React, { useState, useEffect, useRef } from "react";
 
 // Import the images for the dropdown menu icons
 
-import user from "/public/assets/illustrations/profile pic boy.svg";
+import user from "/assets/illustrations/profile pic boy.svg";
 
-import settingsIcon from "/public/assets/illustrations/settings.png";
+import settingsIcon from "/assets/illustrations/settings.png";
 
-import logoutIcon from "/public/assets/illustrations/log-out.png";
-import questionIcon from "/public/assets/illustrations/question.png";
+import logoutIcon from "/assets/illustrations/log-out.png";
+import questionIcon from "/assets/illustrations/question.png";
 
 
 // End of the import
