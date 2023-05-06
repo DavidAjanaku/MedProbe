@@ -1,7 +1,7 @@
 export default function SignInPage() {
   return (
     <div className="font-acumin main-container ">
-      <div className="wrapper-container grid grid-cols-1  md:grid-cols-2 max-h-screen overflow-hidden">
+      <div className="wrapper-container grid grid-cols-1  md:grid-cols-2  overflow-hidden">
         {/* 1. IMAGE CONTAINER */}
         <div className="main-img-container bg-back hidden md:block">
           <div className="logo-div flex mx-20 my-4">
