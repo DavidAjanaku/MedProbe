@@ -1,7 +1,7 @@
 export default function SignInPage() {
   return (
     <div className="font-acumin main-container ">
-      <div className="wrapper-container grid grid-cols-2 max-h-screen overflow-hidden">
+      <div className="wrapper-container grid grid-cols-1  md:grid-cols-2 max-h-screen overflow-hidden">
         {/* 1. IMAGE CONTAINER */}
         <div className="main-img-container bg-back hidden md:block">
           <div className="logo-div flex mx-20 my-4">
@@ -22,7 +22,7 @@ export default function SignInPage() {
         {/* 2. FORM CONTAINER */}
         <div className="main-form-container  my-16 mx-auto w-3/5">
           <div className="">
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center text-center">
               <h1 className="text-4xl font-extrabold text-medium-blue">
                 Welcome Back!
               </h1>
@@ -61,12 +61,12 @@ export default function SignInPage() {
           "
               />
 
-              <div className="flex justify-between gap-10 items-center">
+              <div className="flex justify-between  items-center  flex-wrap">
                 <div>
                   <input type="checkbox" id="checkbox" />
                   <label>I agree to the terms and conditions</label>
                 </div>
-                <button className="rounded-md bg-medium-blue py-3 px-6 text-white text-sm flex items-center my-4">
+                <button className="rounded-md bg-medium-blue py-3 px-6 text-white text-sm flex items-center my-4 w-32">
                   Sign In
                   <svg
                     className="w-4 h-4 ml-2"
