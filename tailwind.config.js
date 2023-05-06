@@ -30,6 +30,8 @@ export default {
         'light-dark': '#f2f0f0',
       },
 
+      
+
 
     },
   },
