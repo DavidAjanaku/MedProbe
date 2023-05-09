@@ -14,6 +14,7 @@ export default function Card() {
             <div className="card-contents__header mb-4">
            <img src={user} className='w-10 m-auto'/>
             </div>
+            {/* done */}
             <div className="card-contents__texts  text-white  ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eum 
             </div>
