@@ -1,3 +1,4 @@
+
 export default function SignUpPage() {
   return (
     <div className="font-acumin main-container ">
@@ -106,8 +107,8 @@ export default function SignUpPage() {
                   <input type="checkbox" id="checkbox" />
                   <label>I agree to the terms and conditions</label>
                 </div>
-                <button className="rounded-md bg-medium-blue py-3 px-5 text-white text-sm flex items-center my-4  w-32">
-                  Sign Up!
+                <button className="rounded-md bg-medium-blue py-3 px-5 text-white text-sm flex items-center my-4  w-32" >
+                  Sign Up! 
                   <svg
                     className="w-4 h-4 ml-2"
                     viewBox="0 0 20 20"

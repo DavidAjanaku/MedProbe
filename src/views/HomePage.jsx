@@ -1,7 +1,9 @@
 // import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/ProfileHeader";
-import SearchSection from "../components/SearchSection";
+import SearchSection from "../components/Showcase";
+import Card from "../components/Card";
+
 
 export default function HomePage() {
   return (
@@ -16,6 +18,18 @@ export default function HomePage() {
           <div className=" bg-blue-500 rounded-xl  sidebar  hidden md:block"></div>
           <div className="bg-gray-200 rounded-xl col-span-2   col-span-5 main-section  md:col-span-4">
             <SearchSection />
+           
+           <div className="card-section  max-w-5xl mt-20 m-auto">
+                <div className="card-wrapper">
+                  <div className="card-wrapper__contents  flex flex-wrap  justify-center">
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                  </div>
+                </div>
+           </div>
           </div>
         </div>
       </div>

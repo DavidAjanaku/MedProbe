@@ -12,6 +12,11 @@
   }
 
 @layer base{
+
+  .my-bg-class {
+    background-color: #2f4875;
+  }
+  
   
 .dropdown-menu{
     position: absolute;

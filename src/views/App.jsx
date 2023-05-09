@@ -5,6 +5,7 @@ import SignUpPage from "./SignUpPage";
 import OtpPage from "./OtpPage";
 import ErrorPage from "../components/Error";
 import SignInPage from "./SignInPage"
+import "../index.css"
 
 function App() {
   return (
