@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function SignInPage() {
   return (
     <div className="font-acumin main-container ">
@@ -88,25 +89,31 @@ export default function SignInPage() {
               <a className="text-yellow-300 text-center text-sm my-4" href="#">
                 Forgot password?
               </a>
+              <Link to="/signup">
+              <p className="text-text-grey text-center text-sm my-4 underline">
+                Don't have an account? Sign Up.
+
+              </p>
+              </Link>
               <p className="text-text-grey text-center text-sm my-4">
                 Connect with social account
               </p>
 
               <div className="social-media-icons my-4 flex justify-center gap-14">
                 <img
-                  src="/public/assets/illustrations/googleIcon.png"
+                  src="/assets/illustrations/googleIcon.png"
                   alt="google"
                   width="20px"
                   height="20px"
                 />
                 <img
-                  src="/public/assets/illustrations/appleLogo.png"
+                  src="/assets/illustrations/appleLogo.png"
                   alt="apple"
                   width="20px"
                   height="20px"
                 />
                 <img
-                  src="/public/assets/illustrations/facebookLogo2.png"
+                  src="/assets/illustrations/facebookLogo2.png"
                   alt="facebook"
                   width="20px"
                   height="20px"

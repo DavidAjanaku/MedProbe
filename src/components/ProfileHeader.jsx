@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 // Import the images for the dropdown menu icons
@@ -10,37 +10,29 @@ import settingsIcon from "/assets/illustrations/settings.png";
 import logoutIcon from "/assets/illustrations/log-out.png";
 import questionIcon from "/assets/illustrations/question.png";
 
-
 // End of the import
 
 import DropdownItem from "./Dropdown";
 
-
-
 export default function ProfileHeader() {
-
-    // Declare the state variable 'open' and the function to update it using the useState hook
+  // Declare the state variable 'open' and the function to update it using the useState hook
 
   const [open, setOpen] = useState(false);
 
-    // Declare a reference to the dropdown menu element using the useRef hook
+  // Declare a reference to the dropdown menu element using the useRef hook
 
   let menuRef = useRef();
 
-
-    // Declare an effect that adds an event listener to the document to handle mouse clicks
+  // Declare an effect that adds an event listener to the document to handle mouse clicks
 
   useEffect(() => {
-
-        // Define the event handler function that will close the dropdown menu if the user clicks outside of it
+    // Define the event handler function that will close the dropdown menu if the user clicks outside of it
 
     let handler = (e) => {
-
-            // Check if the target of the click event is NOT inside the dropdown menu
+      // Check if the target of the click event is NOT inside the dropdown menu
 
       if (!menuRef.current.contains(e.target)) {
-
-                // Update the 'open' state to false to close the dropdown menu
+        // Update the 'open' state to false to close the dropdown menu
 
         setOpen(false);
         console.log(menuRef.current);
@@ -50,7 +42,7 @@ export default function ProfileHeader() {
 
     document.addEventListener("mousedown", handler);
 
-        // Remove the event listener when the component is unmounted
+    // Remove the event listener when the component is unmounted
 
     return () => {
       document.addEventListener("mousedown", handler);
@@ -77,15 +69,17 @@ export default function ProfileHeader() {
           Welcome <span>Username</span>
         </h3>
         <ul>
-          <DropdownItem img={user} text={"My Profile"} path="/profile"/>
-          <DropdownItem img={settingsIcon} text={"Settings"}  path="/settings"/>
-          <DropdownItem img={questionIcon} text={"Help Center"} path="/helpcenter"/>
+          <DropdownItem img={user} text={"My Profile"} path="/profile" />
+          <><DropdownItem img={settingsIcon} text={"Settings"} path="/settings" /><DropdownItem
+      img={questionIcon}
+      text={"Help Center"}
+      path="/helpcenter" /><DropdownItem img={logoutIcon} text={"Logout"} path="/" /></>
+
+          <DropdownItem img={settingsIcon} text={"Settings"}  path="/settings" />
+          <DropdownItem img={questionIcon} text={"Help Center"} path="/helpcenter" />
           <DropdownItem img={logoutIcon} text={"Logout"} path="/"/>
         </ul>
       </div>
     </div>
   );
-      }
-
-
-
+}

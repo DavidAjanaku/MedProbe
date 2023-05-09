@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function SignUpPage() {
   return (
@@ -107,8 +108,8 @@ export default function SignUpPage() {
                   <input type="checkbox" id="checkbox" />
                   <label>I agree to the terms and conditions</label>
                 </div>
-                <button className="rounded-md bg-medium-blue py-3 px-5 text-white text-sm flex items-center my-4  w-32" >
-                  Sign Up! 
+                <button className="rounded-md bg-medium-blue py-3 px-5 text-white text-sm flex items-center my-4  w-32">
+                  Sign Up!
                   <svg
                     className="w-4 h-4 ml-2"
                     viewBox="0 0 20 20"
@@ -132,28 +133,31 @@ export default function SignUpPage() {
 
               <div className="social-media-icons my-4 flex justify-center gap-14">
                 <img
-                  src="/public/assets/illustrations/googleIcon.png"
+                  src="/assets/illustrations/googleIcon.png"
                   alt="google"
                   width="20px"
                   height="20px"
                 />
                 <img
-                  src="/public/assets/illustrations/appleLogo.png"
+                  src="/assets/illustrations/appleLogo.png"
                   alt="apple"
                   width="20px"
                   height="20px"
                 />
                 <img
-                  src="/public/assets/illustrations/facebookLogo2.png"
+                  src="/assets/illustrations/facebookLogo2.png"
                   alt="facebook"
                   width="20px"
                   height="20px"
                 />
               </div>
 
-              <button className="border-2 text-sm py-3  rounded-lg border-black">
-                Already have an account? Log in.
-              </button>
+              <Link
+                to="/"
+                className="border-2 text-sm py-3  rounded-lg border-black text-center"
+              >
+                <button>Already have an account? Log in.</button>
+              </Link>
             </form>
           </div>
         </div>
