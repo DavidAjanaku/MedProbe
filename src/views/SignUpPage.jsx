@@ -1,25 +1,15 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Logo from "../components/Logo";
 
 export default function SignUpPage() {
+  const [email, setEmail] = useState("");
+
   return (
     <div className="font-acumin main-container ">
       <div className="wrapper-container grid grid-cols-1    overflow-hidden  md:grid-cols-2">
         {/* 1. IMAGE CONTAINER */}
-        <div className="main-img-container bg-back hidden md:block">
-          <div className="logo-div flex mx-20 my-4">
-            <img
-              src="/assets/illustrations/search (4).png"
-              alt="logo"
-              width="30px"
-              height="30px"
-            />
-            <p className="text-2xl text-text-blue">medProbe</p>
-          </div>
-          <img
-            src="/assets/illustrations/man-searching.svg"
-            alt="sign up image"
-          />
-        </div>
+        <Logo />
 
         {/* 2. FORM CONTAINER */}
         <div className="main-form-container  my-12 mx-auto  w-4/5  md:w-3/5">
@@ -35,7 +25,7 @@ export default function SignUpPage() {
             </div>
 
             {/* 3. MAIN FORM  */}
-            <form className="flex flex-col my-2 ">
+            <form className="flex flex-col my-2 " onSubmit={handleSubmit}>
               <span className="block text-sm font-medium text-medium-blue ">
                 First Name
               </span>
@@ -66,6 +56,7 @@ export default function SignUpPage() {
                 Email
               </span>
               <input
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 required
                 placeholder="you@example.com"
@@ -80,6 +71,7 @@ export default function SignUpPage() {
                 Password
               </span>
               <input
+                onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 required
                 className="mt-1 my-2 h-12 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400

@@ -1,24 +1,10 @@
 import { Link } from "react-router-dom";
+import Logo from "../components/Logo";
 export default function SignInPage() {
   return (
     <div className="font-acumin main-container ">
       <div className="wrapper-container grid grid-cols-1  md:grid-cols-2  overflow-hidden">
-        {/* 1. IMAGE CONTAINER */}
-        <div className="main-img-container bg-back hidden md:block">
-          <div className="logo-div flex mx-20 my-4">
-            <img
-              src="/assets/illustrations/search (4).png"
-              alt="logo"
-              width="30px"
-              height="30px"
-            />
-            <p className="text-2xl text-text-blue">medProbe</p>
-          </div>
-          <img
-            src="/assets/illustrations/lady-searching.svg"
-            alt="sign up image"
-          />
-        </div>
+        <Logo />
 
         {/* 2. FORM CONTAINER */}
         <div className="main-form-container  my-16 mx-auto w-4/5  md:w-3/5">
@@ -90,10 +76,9 @@ export default function SignInPage() {
                 Forgot password?
               </a>
               <Link to="/signup">
-              <p className="text-text-grey text-center text-sm my-4 underline">
-                Don't have an account? Sign Up.
-
-              </p>
+                <p className="text-text-grey text-center text-sm my-4 underline">
+                  Don't have an account? Sign Up.
+                </p>
               </Link>
               <p className="text-text-grey text-center text-sm my-4">
                 Connect with social account
