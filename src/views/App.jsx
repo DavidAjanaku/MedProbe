@@ -10,10 +10,12 @@ import SignUpPage from "./SignUpPage";
 import ErrorPage from "../components/Error";
 import SignInPage from "./SignInPage";
 import "../index.css";
+import { AuthContextProvider } from "../context/AuthContext";
 
 function App() {
   return (
       <Router>
+        <AuthContextProvider>
         <Routes>
           <Route path="/" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
@@ -22,6 +24,7 @@ function App() {
           {/* If a user navigates to a link that is not defined, the code will still work and display an error message " */}
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
+        </AuthContextProvider>
       </Router>
   );
 }

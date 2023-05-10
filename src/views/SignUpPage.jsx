@@ -1,9 +1,24 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../components/Logo";
+import { UserAuth } from "../context/AuthContext";
 
 export default function SignUpPage() {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const { createUser } = UserAuth();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await createUser(email, password);
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+    }
+  };
 
   return (
     <div className="font-acumin main-container ">
