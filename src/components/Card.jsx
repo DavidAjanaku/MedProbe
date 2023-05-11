@@ -1,7 +1,7 @@
 // import user from "/Users/user/Desktop/med-probe/public/assets/illustrations/profile pic boy.svg";
 
 
-export default function Card() {
+export default function Card(props) {
   return (
     <>
     <div className="card-wrapper  ">
@@ -13,7 +13,8 @@ export default function Card() {
             </div>
             {/* done */}
             <div className="card-contents__texts  text-white  ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eum 
+              <h1>{props.title}</h1>
+              {props.description}
             </div>
         </div>
         </div>

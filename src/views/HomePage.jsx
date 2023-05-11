@@ -18,37 +18,84 @@ export default function HomePage() {
           <div className=" bg-blue-500 rounded-xl  sidebar  hidden md:block"></div>
           <div className="bg-gray-200 rounded-xl col-span-2   col-span-5 main-section  md:col-span-4">
             <SearchSection />
-           
-           <div className="card-section  max-w-5xl mt-20 m-auto">
-                <div className="card-wrapper">
-                  <div className="card-wrapper__contents max-w-4xl m-auto flex flex-wrap  gap-10 justify-center">
-                    <Link to="/profile">
-                    <Card />
 
-                    </Link>
-                    <Link to="/profile">
-                    <Card />
+            <div className="card-section  max-w-5xl mt-20 m-auto">
+              <div className="card-wrapper">
+                <div className="card-wrapper__contents max-w-4xl m-auto flex flex-wrap  gap-10 justify-center">
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Anatomy"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Conditions"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>{" "}
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Heroes"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>{" "}
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Terminology"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Terminology"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Alternatives"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Nutrition"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Mental Health"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Medical Research"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>
 
-                    </Link>
-                    <Link to="/profile">
-                    <Card />
-
-                    </Link>
-
-                    <Link to="/profile">
-                    <Card />
-
-                    </Link>
-
-                    <Link to="/profile">
-                    <Card />
-
-                    </Link>
-
-                   
-                  </div>
+                  <Link to="/profile">
+                    <Card
+                      imageSrc="/public/assets/illustrations/appleLogo.png"
+                      title="Public Health"
+                      description="ur adipisicing elit. Dicta eum"
+                    />
+                  </Link>
                 </div>
-           </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
