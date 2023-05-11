@@ -5,7 +5,7 @@ export default function Card() {
   return (
     <>
     <div className="card-wrapper  ">
-        <div className="card-contents  text-center  my-bg-class  m-10 w-56 rounded-md cursor-pointer">
+        <div className="card-contents  text-center  my-bg-class  w-56 rounded-md cursor-pointer">
         <div className="card-container__contents p-4">
 
             <div className="card-contents__header mb-4">

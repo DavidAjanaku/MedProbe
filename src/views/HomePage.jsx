@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/ProfileHeader";
 import SearchSection from "../components/Showcase";
 import Card from "../components/Card";
-
+import Food from "../components/ApiContainers/food";
 
 export default function HomePage() {
   return (
@@ -21,12 +21,31 @@ export default function HomePage() {
            
            <div className="card-section  max-w-5xl mt-20 m-auto">
                 <div className="card-wrapper">
-                  <div className="card-wrapper__contents  flex flex-wrap  justify-center">
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                  <div className="card-wrapper__contents max-w-4xl m-auto flex flex-wrap  gap-10 justify-center">
+                    <Link to="/profile">
+                    <Card />
+
+                    </Link>
+                    <Link to="/profile">
+                    <Card />
+
+                    </Link>
+                    <Link to="/profile">
+                    <Card />
+
+                    </Link>
+
+                    <Link to="/profile">
+                    <Card />
+
+                    </Link>
+
+                    <Link to="/profile">
+                    <Card />
+
+                    </Link>
+
+                   
                   </div>
                 </div>
            </div>
