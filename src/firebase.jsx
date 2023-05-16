@@ -11,6 +11,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBMsifsu5jEepc17Ak5uSbmg5OHBMiLxHw",
   authDomain: "medprobe-auth.firebaseapp.com",
   projectId: "medprobe-auth",
+  databaseUrl:"https://medprobe-auth-default-rtdb.firebaseio.com/",
   storageBucket: "medprobe-auth.appspot.com",
   messagingSenderId: "338602095735",
   appId: "1:338602095735:web:d724cfde0da5b592d5c272",

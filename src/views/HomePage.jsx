@@ -52,7 +52,7 @@ export default function HomePage() {
                       description="Explore body parts from head to toe"
                     />
                   </Link>
-                  <Link to="/profile">
+                  {/* <Link to="/profile">
                     <Card
                       imageSrc="/public/assets/illustrations/appleLogo.png"
                       title="Conditions"
@@ -115,7 +115,7 @@ export default function HomePage() {
                       title="Public Health"
                       description="Health issues affecting  entire populations"
                     />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
