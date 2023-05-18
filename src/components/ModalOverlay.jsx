@@ -1,5 +1,5 @@
 // import React from "react";
-// import well from '/Users/user/Desktop/med-probe/public/assets/illustrations/welcomeToMed.avif'
+import well from '/public/assets/illustrations/welcomeToMed.avif'
 
 export default function ({ onClose }) {
   // Function component that receives a prop onClose
@@ -22,7 +22,7 @@ export default function ({ onClose }) {
               <path d="M18.3 5.7c-.4-.4-1-.4-1.4 0L12 10.6 7.1 5.7c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l4.9 4.9-4.9 4.9c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3L12 13.4l4.9 4.9c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4l-4.9-4.9 4.9-4.9c.4-.3.4-1 0-1.4z" />
             </svg>
           </button>
-          <p className="text-lg font-medium text-gray-800  " style={{ maxWidth: "500px" }}>
+          <div className="text-lg font-medium text-gray-800  " style={{ maxWidth: "500px" }}>
             <img src={well}/>
            <p className="mt-4  text-base">
            Welcome to  medProbe, where you can find information
@@ -36,7 +36,7 @@ export default function ({ onClose }) {
             summary of the topic, as well as links to more in-depth articles and
             resources.
            </p>
-          </p>
+          </div>
         </div>
       </div>
     </>

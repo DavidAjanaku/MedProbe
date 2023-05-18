@@ -50,7 +50,7 @@ const SearchBar = () => {
       />
       {selectedOption && (
         <div>
-          <h1 className="text-4xl font-extrabold text-medium-blue px-4">
+          <h1 className="text-4xl font-extrabold text-medium-blue px-4 uppercase">
             {selectedOption.value}
           </h1>
           {/* Render the images if available */}
