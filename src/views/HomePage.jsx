@@ -29,7 +29,7 @@ export default function HomePage() {
    
   return (
     <>
-      {showModal && <ModalOverlay onClose={handleCloseModal} />}
+      {/* {showModal && <ModalOverlay onClose={handleCloseModal} />} */}
       <nav className="justify-between...  bg-indigo-500 ...">
         <Link to="/signup">Sign Up</Link>
         <Link to="/Home">Home</Link>

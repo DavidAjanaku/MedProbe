@@ -38,10 +38,12 @@ const SearchBar = () => {
     setSelectedOption(selectedOption);
   };
 
+  
+
   return (
     <div>
       <Select
-        className="m-4"
+        className="m-4  text-black"
         value={selectedOption}
         inputValue={inputValue}
         onInputChange={handleInputChange}
@@ -76,60 +78,143 @@ const SearchBar = () => {
             )}
           </div>
           <h2>{selectedOption.label}</h2>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4 ">
-            <div className="text-gray-800 text-lg  ">
-              <h1 className="text-2xl font-bold text-medium-blue">
-                Definition
-              </h1>{" "}
-              {selectedOption.definition}
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <div className="text-gray-800 text-lg ">
-              <h1 className="text-2xl font-bold text-medium-blue"> Causes</h1>{" "}
-              {selectedOption.causes}
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <div className="text-gray-800 text-lg ">
-              <h1 className="text-2xl font-bold text-medium-blue">Diagnosis</h1>{" "}
-              {selectedOption.diagnosis}
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <div className="text-gray-800 text-lg ">
-              <h1 className="text-2xl font-bold text-medium-blue">
-                Management
-              </h1>{" "}
-              {selectedOption.management}
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <div className="text-gray-800 text-lg ">
-              <h1 className="text-2xl font-bold text-medium-blue">
-                Prevention
-              </h1>{" "}
-              {selectedOption.prevention}
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <div className="text-gray-800 text-lg ">
-              <h1 className="text-2xl font-bold text-medium-blue">Prognosis</h1>{" "}
-              {selectedOption.prognosis}
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <div className="text-gray-800 text-lg ">
-              <h1 className="text-2xl font-bold text-medium-blue">Symptoms</h1>{" "}
-              {selectedOption.symptoms}
-            </div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <div className="text-gray-800 text-lg ">
-              <h1 className="text-2xl font-bold text-medium-blue">Treatment</h1>{" "}
-              {selectedOption.treatment}
-            </div>
-          </div>
+
+          {selectedOption.definition && (
+   <div className="bg-white rounded-lg shadow-md p-4 m-4 ">
+   <div className="text-gray-800 text-lg  ">
+     <h1 className="text-2xl font-bold text-medium-blue">
+       Definition
+     </h1>
+     {selectedOption.definition}
+   </div>
+ </div>
+          )}
+       
+       {selectedOption.causes && (
+     <div className="bg-white rounded-lg shadow-md p-4 m-4">
+     <div className="text-gray-800 text-lg ">
+       <h1 className="text-2xl font-bold text-medium-blue"> Causes</h1>
+       {selectedOption.causes}
+     </div>
+   </div>
+ )}
+
+{selectedOption.diagnosis && (
+   <div className="bg-white rounded-lg shadow-md p-4 m-4">
+   <div className="text-gray-800 text-lg ">
+     <h1 className="text-2xl font-bold text-medium-blue">Diagnosis</h1>
+     {selectedOption.diagnosis}
+   </div>
+ </div>
+)}
+      
+      {selectedOption.management && (
+     <div className="bg-white rounded-lg shadow-md p-4 m-4">
+     <div className="text-gray-800 text-lg ">
+       <h1 className="text-2xl font-bold text-medium-blue">
+         Management
+       </h1>
+       {selectedOption.management}
+     </div>
+   </div>
+)}
+
+{selectedOption.prevention && (
+      <div className="bg-white rounded-lg shadow-md p-4 m-4">
+      <div className="text-gray-800 text-lg ">
+        <h1 className="text-2xl font-bold text-medium-blue">
+          Prevention
+        </h1>
+        {selectedOption.prevention}
+      </div>
+    </div>
+)} 
+       {selectedOption.prognosis && (
+       <div className="bg-white rounded-lg shadow-md p-4 m-4">
+       <div className="text-gray-800 text-lg ">
+         <h1 className="text-2xl font-bold text-medium-blue">Prognosis</h1>
+         {selectedOption.prognosis}
+       </div>
+     </div>
+)} 
+       
+       
+      
+          {selectedOption.symptoms && (
+  <div className="bg-white rounded-lg shadow-md p-4 m-4">
+    <div className="text-gray-800 text-lg ">
+      <h1 className="text-2xl font-bold text-medium-blue">Symptoms</h1>
+      {selectedOption.symptoms}
+    </div>
+  </div>
+)}
+
+{selectedOption.treatment && (
+    <div className="bg-white rounded-lg shadow-md p-4 m-4">
+    <div className="text-gray-800 text-lg ">
+      <h1 className="text-2xl font-bold text-medium-blue">Treatment</h1>
+      {selectedOption.treatment}
+    </div>
+  </div>
+)}
+
+
+{selectedOption.function && (
+    <div className="bg-white rounded-lg shadow-md p-4 m-4">
+    <div className="text-gray-800 text-lg ">
+      <h1 className="text-2xl font-bold text-medium-blue">Function</h1>
+      {selectedOption.function}
+    </div>
+  </div>
+)}
+
+
+{selectedOption.location && (
+    <div className="bg-white rounded-lg shadow-md p-4 m-4">
+    <div className="text-gray-800 text-lg ">
+      <h1 className="text-2xl font-bold text-medium-blue">Location</h1>
+      {selectedOption.location}
+    </div>
+  </div>
+)}
+
+{selectedOption.size && (
+    <div className="bg-white rounded-lg shadow-md p-4 m-4">
+    <div className="text-gray-800 text-lg ">
+      <h1 className="text-2xl font-bold text-medium-blue">Size</h1>
+      {selectedOption.size}
+    </div>
+  </div>
+)}
+
+{selectedOption.shape && (
+    <div className="bg-white rounded-lg shadow-md p-4 m-4">
+    <div className="text-gray-800 text-lg ">
+      <h1 className="text-2xl font-bold text-medium-blue">Shape</h1>
+      {selectedOption.shape}
+    </div>
+  </div>
+)}
+
+{selectedOption.composition && (
+    <div className="bg-white rounded-lg shadow-md p-4 m-4">
+    <div className="text-gray-800 text-lg ">
+      <h1 className="text-2xl font-bold text-medium-blue">Composition</h1>
+      {selectedOption.composition}
+    </div>
+  </div>
+)}
+
+{selectedOption.blood_supply && (
+    <div className="bg-white rounded-lg shadow-md p-4 m-4">
+    <div className="text-gray-800 text-lg ">
+      <h1 className="text-2xl font-bold text-medium-blue">Blood Supply</h1>
+      {selectedOption.blood_supply}
+    </div>
+  </div>
+)}
+
+      
         </div>
       )}
     </div>
