@@ -50,6 +50,30 @@ const SearchBar = () => {
       />
       {selectedOption && (
         <div>
+
+
+          {/* Render the images if available */}
+          <div className="w-4/5   md:flex  md:w-2/5" >
+            {selectedOption.images && selectedOption.images.length > 0 ? (
+              selectedOption.images.map((imageUrl, index) => (
+                <img
+                  src={imageUrl}
+                  className="m-4  "
+                  alt={`Image ${index + 1}`}
+                  key={index}
+                />
+              ))
+            ) : (
+              <>
+                {" "}
+                <div className="bg-white rounded-lg shadow-md p-4 m-4">
+                  <p className="text-gray-800 text-lg font-bold">
+                    No Images Available.
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
           <h2>{selectedOption.label}</h2>
           <div className="bg-white rounded-lg shadow-md p-4 m-4 ">
           <div className="text-gray-800 text-lg  "><h1 className="text-2xl font-bold text-medium-blue">Definition:</h1> {selectedOption.definition}</div>
@@ -77,28 +101,6 @@ const SearchBar = () => {
           </div>
 
 
-          {/* Render the images if available */}
-          <div className="w-4/5">
-            {selectedOption.images && selectedOption.images.length > 0 ? (
-              selectedOption.images.map((imageUrl, index) => (
-                <img
-                  src={imageUrl}
-                  className="m-4  "
-                  alt={`Image ${index + 1}`}
-                  key={index}
-                />
-              ))
-            ) : (
-              <>
-                {" "}
-                <div className="bg-white rounded-lg shadow-md p-4 m-4">
-                  <p className="text-gray-800 text-lg font-bold">
-                    No Images Available.
-                  </p>
-                </div>
-              </>
-            )}
-          </div>
         </div>
       )}
     </div>
