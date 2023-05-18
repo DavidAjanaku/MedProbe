@@ -41,6 +41,7 @@ export default function HomePage() {
           <div className="bg-gray-200 rounded-xl col-span-2   col-span-5 main-section  md:col-span-4">
             <Showcase />
 <SearchBar/>
+
            
           </div>
         </div>

@@ -21,9 +21,12 @@ const SearchBar = () => {
       const data = await response.json();
       const options = Object.keys(data).map((key) => ({
         value: key,
-        label: data[key].name,
+        label: key,
         ...data[key],
       }));
+
+      console.log(data);
+      console.log(options);
       setOptions(options);
     } catch (error) {
       console.error(error);
@@ -38,6 +41,8 @@ const SearchBar = () => {
     setSelectedOption(selectedOption);
   };
 
+
+
   
 
   return (
@@ -48,6 +53,7 @@ const SearchBar = () => {
         inputValue={inputValue}
         onInputChange={handleInputChange}
         onChange={handleChange}
+
         options={options}
       />
       {selectedOption && (
@@ -77,7 +83,6 @@ const SearchBar = () => {
               </>
             )}
           </div>
-          <h2>{selectedOption.label}</h2>
 
           {selectedOption.definition && (
    <div className="bg-white rounded-lg shadow-md p-4 m-4 ">
@@ -208,7 +213,7 @@ const SearchBar = () => {
 {selectedOption.blood_supply && (
     <div className="bg-white rounded-lg shadow-md p-4 m-4">
     <div className="text-gray-800 text-lg ">
-      <h1 className="text-2xl font-bold text-medium-blue">Blood Supply</h1>
+      <h1 className="text-2xl font-bold text-medium-blue">Blood supply</h1>
       {selectedOption.blood_supply}
     </div>
   </div>
