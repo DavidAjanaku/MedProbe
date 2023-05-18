@@ -51,47 +51,31 @@ const SearchBar = () => {
       {selectedOption && (
         <div>
           <h2>{selectedOption.label}</h2>
-          <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <p className="text-gray-800 text-lg font-bold">
-              Definition: {selectedOption.definition}
-            </p>
+          <div className="bg-white rounded-lg shadow-md p-4 m-4 ">
+          <div className="text-gray-800 text-lg  "><h1 className="text-2xl font-bold text-medium-blue">Definition:</h1> {selectedOption.definition}</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <p className="text-gray-800 text-lg font-bold">
-              {" "}
-              Causes: {selectedOption.causes}
-            </p>
+          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue"> Causes:</h1> {selectedOption.causes}</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <p className="text-gray-800 text-lg font-bold">
-              Diagnosis: {selectedOption.diagnosis}
-            </p>
+          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Diagnosis:</h1> {selectedOption.diagnosis}</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <p className="text-gray-800 text-lg font-bold">
-              Management: {selectedOption.management}
-            </p>
+          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Management:</h1> {selectedOption.management}</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <p className="text-gray-800 text-lg font-bold">
-              Prevention: {selectedOption.prevention}
-            </p>
+          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Prevention:</h1> {selectedOption.prevention}</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <p className="text-gray-800 text-lg font-bold">
-              Prognosis: {selectedOption.prognosis}
-            </p>
+          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Prognosis:</h1> {selectedOption.prognosis}</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <p className="text-gray-800 text-lg font-bold">
-              Symptoms: {selectedOption.symptoms}
-            </p>
+          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Symptoms:</h1> {selectedOption.symptoms}</div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-            <p className="text-gray-800 text-lg font-bold">
-              Treatment: {selectedOption.treatment}
-            </p>
+          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Treatment:</h1> {selectedOption.treatment}</div>
           </div>
+
 
           {/* Render the images if available */}
           <div className="w-4/5">

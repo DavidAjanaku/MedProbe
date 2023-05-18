@@ -1,14 +1,18 @@
 export default function SearchSection() {
   return (
     <>
-      <section className="box-content text-center mt-0 mb-0 ml-auto mr-auto  max-w-2xl">
+      <div className="main-img-container bg-back  md:block">
+      <div className="logo-div flex mx-20 my-4  justify-center">
         <img
-          src="/public/assets/illustrations/search (4).png"
-          className="w-12  mt-14 mx-auto mb-8"
+          src="/assets/illustrations/search (4).png"
           alt="logo"
+          width="30px"
+          height="30px"
         />
-        <div className="companyName text-3xl flex items-center justify-center"><p className="font-medium bg-medium-blue text-white rounded p-2">med</p> <span className=" font-medium ml-[-8px]">Probe</span></div>
-      </section>
+        <p className="text-2xl text-text-blue">medProbe</p>
+      </div>
+      {/* <img src="/assets/illustrations/man-searching.svg" alt="sign up image" /> */}
+    </div>
     </>
   );
 }
