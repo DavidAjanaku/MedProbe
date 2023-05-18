@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 
-
 // Import the images for the dropdown menu icons
 
 import user from "/assets/illustrations/profile pic boy.svg";
@@ -70,14 +69,34 @@ export default function ProfileHeader() {
         </h3>
         <ul>
           <DropdownItem img={user} text={"My Profile"} path="/profile" />
-          <><DropdownItem img={settingsIcon} text={"Settings"} path="/settings" /><DropdownItem
-      img={questionIcon}
-      text={"Help Center"}
-      path="/helpcenter" /><DropdownItem img={logoutIcon} text={"Logout"} path="/" /></>
+          <>
+            <DropdownItem
+              img={settingsIcon}
+              text={"Settings"}
+              path="/settings"
+            />
+            <DropdownItem
+              img={questionIcon}
+              text={"Help Center"}
+              path="/helpcenter"
+            />
+            <DropdownItem img={logoutIcon} text={"Logout"} path="/" />
+          </>
 
-          <DropdownItem img={settingsIcon} text={"Settings"}  path="/settings" />
-          <DropdownItem img={questionIcon} text={"Help Center"} path="/helpcenter" />
-          <DropdownItem img={logoutIcon} text={"Logout"} path="/"/>
+          <DropdownItem img={settingsIcon} text={"Settings"} path="/settings" />
+          <DropdownItem
+            img={questionIcon}
+            text={"Help Center"}
+            path="/helpcenter"
+          />
+          <DropdownItem img={logoutIcon} text={"Logout"} path="/" />
+          <DropdownItem img={settingsIcon} text={"Settings"} path="/settings" />
+          <DropdownItem
+            img={questionIcon}
+            text={"Help Center"}
+            path="/helpcenter"
+          />
+          <DropdownItem img={logoutIcon} text={"Logout"} path="/" />
         </ul>
       </div>
     </div>

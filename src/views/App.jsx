@@ -20,7 +20,10 @@ function App() {
           <Route path="/" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/Home" element={<Home />} />
-          {/* <Route path="/OtpPage" element={<OtpPage />} /> */}
+          {/* <Route path="/otpPage" element={<OtpPage />} /> */}
+          <Route path="/login" element={<SignInPage />} />
+
+
           {/* If a user navigates to a link that is not defined, the code will still work and display an error message " */}
           <Route path="/*" element={<ErrorPage />} />
         </Routes>

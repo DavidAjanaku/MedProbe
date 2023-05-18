@@ -1,5 +1,5 @@
-import React from "react";
-import well from '/Users/user/Desktop/med-probe/public/assets/illustrations/welcomeToMed.avif'
+// import React from "react";
+// import well from '/Users/user/Desktop/med-probe/public/assets/illustrations/welcomeToMed.avif'
 
 export default function ({ onClose }) {
   // Function component that receives a prop onClose

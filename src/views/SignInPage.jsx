@@ -105,9 +105,10 @@ export default function SignInPage() {
                 />
               </div>
 
-              <button className="border-2 text-sm py-3 my-6 rounded-lg border-black">
+
+              {/* <button className="border-2 text-sm py-3 my-6 rounded-lg border-black">
                 Register here
-              </button>
+              </button> */}
             </form>
           </div>
         </div>

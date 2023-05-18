@@ -1,4 +1,3 @@
-
 const Logo = () => {
   return (
     <div className="main-img-container bg-back hidden md:block">
@@ -14,6 +13,6 @@ const Logo = () => {
       <img src="/assets/illustrations/man-searching.svg" alt="sign up image" />
     </div>
   );
-}
+};
 
-export default Logo
+export default Logo;
