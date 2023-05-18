@@ -50,10 +50,11 @@ const SearchBar = () => {
       />
       {selectedOption && (
         <div>
-
-
+          <h1 className="text-4xl font-extrabold text-medium-blue px-4">
+            {selectedOption.value}
+          </h1>
           {/* Render the images if available */}
-          <div className="w-4/5   md:flex  md:w-2/5" >
+          <div className="w-4/5   md:flex  md:w-2/5">
             {selectedOption.images && selectedOption.images.length > 0 ? (
               selectedOption.images.map((imageUrl, index) => (
                 <img
@@ -76,31 +77,59 @@ const SearchBar = () => {
           </div>
           <h2>{selectedOption.label}</h2>
           <div className="bg-white rounded-lg shadow-md p-4 m-4 ">
-          <div className="text-gray-800 text-lg  "><h1 className="text-2xl font-bold text-medium-blue">Definition:</h1> {selectedOption.definition}</div>
+            <div className="text-gray-800 text-lg  ">
+              <h1 className="text-2xl font-bold text-medium-blue">
+                Definition
+              </h1>{" "}
+              {selectedOption.definition}
+            </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue"> Causes:</h1> {selectedOption.causes}</div>
+            <div className="text-gray-800 text-lg ">
+              <h1 className="text-2xl font-bold text-medium-blue"> Causes</h1>{" "}
+              {selectedOption.causes}
+            </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Diagnosis:</h1> {selectedOption.diagnosis}</div>
+            <div className="text-gray-800 text-lg ">
+              <h1 className="text-2xl font-bold text-medium-blue">Diagnosis</h1>{" "}
+              {selectedOption.diagnosis}
+            </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Management:</h1> {selectedOption.management}</div>
+            <div className="text-gray-800 text-lg ">
+              <h1 className="text-2xl font-bold text-medium-blue">
+                Management
+              </h1>{" "}
+              {selectedOption.management}
+            </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Prevention:</h1> {selectedOption.prevention}</div>
+            <div className="text-gray-800 text-lg ">
+              <h1 className="text-2xl font-bold text-medium-blue">
+                Prevention
+              </h1>{" "}
+              {selectedOption.prevention}
+            </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Prognosis:</h1> {selectedOption.prognosis}</div>
+            <div className="text-gray-800 text-lg ">
+              <h1 className="text-2xl font-bold text-medium-blue">Prognosis</h1>{" "}
+              {selectedOption.prognosis}
+            </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Symptoms:</h1> {selectedOption.symptoms}</div>
+            <div className="text-gray-800 text-lg ">
+              <h1 className="text-2xl font-bold text-medium-blue">Symptoms</h1>{" "}
+              {selectedOption.symptoms}
+            </div>
           </div>
           <div className="bg-white rounded-lg shadow-md p-4 m-4">
-          <div className="text-gray-800 text-lg "><h1 className="text-2xl font-bold text-medium-blue">Treatment:</h1> {selectedOption.treatment}</div>
+            <div className="text-gray-800 text-lg ">
+              <h1 className="text-2xl font-bold text-medium-blue">Treatment</h1>{" "}
+              {selectedOption.treatment}
+            </div>
           </div>
-
-
         </div>
       )}
     </div>
