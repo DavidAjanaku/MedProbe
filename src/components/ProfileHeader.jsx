@@ -5,6 +5,7 @@ import questionIcon from "/assets/illustrations/question.png";
 import { UserAuth } from "../context/AuthContext";
 import userPic from "/assets/illustrations/user.png";
 import { useNavigate } from "react-router-dom";
+import Hamburger from "./Hamburger";
 
 import DropdownItem from "./Dropdown";
 
@@ -59,6 +60,10 @@ export default function ProfileHeader() {
       className="menu-container z-40 h-14 p-3  fixed left-0 right-0 top-0  bg-white	"
       ref={menuRef}
     >
+      <div className="md:hidden">
+      <Hamburger/>
+
+      </div>
       <div
         className="menu-trigger "
         onClick={() => {

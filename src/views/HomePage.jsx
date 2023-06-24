@@ -1,16 +1,15 @@
-// import React from "react";
 import React, { useState, useEffect } from "react";
-
 import { Link } from "react-router-dom";
 import Header from "../components/ProfileHeader";
 import Showcase from "../components/Showcase";
 import Card from "../components/Card";
 import ModalOverlay from "../components/ModalOverlay";
 import SearchBar from "../components/SearchBar";
+import SideBar from "../components/SideBar";
 
 export default function HomePage() {
-
   const [showModal, setShowModal] = useState(false);
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -26,7 +25,10 @@ export default function HomePage() {
     setShowModal(false);
   };
 
-   
+  const handleToggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
+  };
+
   return (
     <>
       {/* {showModal && <ModalOverlay onClose={handleCloseModal} />} */}
@@ -35,14 +37,18 @@ export default function HomePage() {
         <Link to="/Home">Home</Link>
       </nav>
       <Header />
-      <div className="home-container bg-gray-100 p-3  mt-4  h-[90vh]">
-        <div className="grid grid-cols-5 gap-2 h-[90vh]">
-          <div className=" bg-blue-500 rounded-xl  sidebar  hidden md:block"></div>
-          <div className="bg-gray-200 rounded-xl col-span-2   col-span-5 main-section  md:col-span-4">
+      <div className="home-container bg-gray-100 p-3  mt-4  h-[90vh] flex">
+        <div
+          className={`w-[20%] hidden md:block ${
+            sidebarVisible ? "block" : "hidden"
+          }`}
+        >
+          <SideBar />
+        </div>
+        <div className="h-[90vh] ml-2 w-[100%] md:w-[80%] ">
+          <div className="bg-gray-200 rounded-xl mt-4 p-4 overflow-scroll h-[90vh] main-section ">
             <Showcase />
-<SearchBar/>
-
-           
+            <SearchBar />
           </div>
         </div>
       </div>
