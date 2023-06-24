@@ -35,8 +35,8 @@ export default function HomePage() {
         <Link to="/Home">Home</Link>
       </nav>
       <Header />
-      <div className="home-container bg-gray-100 p-3  mt-4  h-screen">
-        <div className="grid grid-cols-5 gap-2 h-screen">
+      <div className="home-container bg-gray-100 p-3  mt-4  h-[90vh]">
+        <div className="grid grid-cols-5 gap-2 h-[90vh]">
           <div className=" bg-blue-500 rounded-xl  sidebar  hidden md:block"></div>
           <div className="bg-gray-200 rounded-xl col-span-2   col-span-5 main-section  md:col-span-4">
             <Showcase />

@@ -29,9 +29,9 @@ export default {
         "light-blue": "#ced9f9",
         "light-dark": "#f2f0f0",
         "text-blue": "#0d1b2a",
-       
+
         "text-grey": "#9195A5",
-       " bg-slate-300":	"#d5e1cb"
+        " bg-slate-300": "#d5e1cb",
       },
     },
   },
