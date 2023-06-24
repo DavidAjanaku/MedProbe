@@ -1,19 +1,26 @@
 import { useState, useEffect, useRef } from "react";
-
-// Import the images for the dropdown menu icons
-
-import user from "/assets/illustrations/profile pic boy.svg";
-
 import settingsIcon from "/assets/illustrations/settings.png";
-
 import logoutIcon from "/assets/illustrations/log-out.png";
 import questionIcon from "/assets/illustrations/question.png";
-
-// End of the import
+import { UserAuth } from "../context/AuthContext";
+import userPic from "/assets/illustrations/user.png";
+import { useNavigate } from "react-router-dom";
 
 import DropdownItem from "./Dropdown";
 
 export default function ProfileHeader() {
+  const { user, logout } = UserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate("/login");
+      console.log("You are logged out");
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
   // Declare the state variable 'open' and the function to update it using the useState hook
 
   const [open, setOpen] = useState(false);
@@ -60,15 +67,15 @@ export default function ProfileHeader() {
       >
         <img
           className="absolute  top-4 right-4 rounded-xl  h-12 w-12  cursor-pointer"
-          src={user}
-        ></img>
+          src="/assets/illustrations/profile pic boy.svg"
+        />
       </div>
       <div className={`dropdown-menu  ${open ? "active" : "inactive"}`}>
         <h3>
-          Welcome <span>Username</span>
+          Welcome <span>{user && user.email}</span>
         </h3>
         <ul>
-          <DropdownItem img={user} text={"My Profile"} path="/profile" />
+          <DropdownItem img={userPic} text={"My Profile"} path="/profile" />
           <>
             <DropdownItem
               img={settingsIcon}
@@ -80,7 +87,9 @@ export default function ProfileHeader() {
               text={"Help Center"}
               path="/helpcenter"
             />
-            <DropdownItem img={logoutIcon} text={"Logout"} path="/" />
+            <button onClick={handleLogout}>
+              <DropdownItem img={logoutIcon} text={"Logout"} />
+            </button>
           </>
 
           {/* <DropdownItem img={settingsIcon} text={"Settings"}  path="/settings" />

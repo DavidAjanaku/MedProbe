@@ -1,10 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
+import { UserAuth } from "../context/AuthContext";
+import { useState } from "react";
+
 export default function SignInPage() {
+  const navigate = useNavigate();
+  const { signIn } = UserAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await signIn(email, password);
+      navigate("/home");
+    } catch (e) {
+      setError(e.message);
+      console.log(e.message);
+    }
+  };
+
   return (
     <div className="font-acumin main-container ">
       <div className="wrapper-container grid grid-cols-1  md:grid-cols-2  overflow-hidden">
-        <Logo />
+        <Logo isSignUp={false} />
 
         {/* 2. FORM CONTAINER */}
         <div className="main-form-container  my-16 mx-auto w-4/5  md:w-3/5">
@@ -19,7 +40,10 @@ export default function SignInPage() {
             </div>
 
             {/* 3. MAIN FORM  */}
-            <form className="flex flex-col my-8  md:my-20 ">
+            <form
+              className="flex flex-col my-8  md:my-20 "
+              onSubmit={handleSubmit}
+            >
               <span className="block text-sm font-medium text-medium-blue ">
                 Email
               </span>
@@ -27,11 +51,12 @@ export default function SignInPage() {
                 type="email"
                 required
                 placeholder="you@example.com"
+                onChange={(e) => setEmail(e.target.value)}
                 className="mt-1 block w-full h-12 my-4 px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+              focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
               disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
               invalid:border-pink-500 invalid:text-pink-600
-              focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
               />
 
               <span className="block text-sm font-medium  text-medium-blue ">
@@ -40,6 +65,7 @@ export default function SignInPage() {
               <input
                 type="password"
                 required
+                onChange={(e) => setPassword(e.target.value)}
                 className="mt-1 my-4 h-12 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
               focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
               disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
@@ -77,7 +103,7 @@ export default function SignInPage() {
               </a>
               <Link to="/signup">
                 <p className="text-text-grey text-center text-sm my-4 underline">
-                  Don't have an account? Sign Up.
+                  Dont have an account? Sign Up.
                 </p>
               </Link>
               <p className="text-text-grey text-center text-sm my-4">
@@ -104,7 +130,6 @@ export default function SignInPage() {
                   height="20px"
                 />
               </div>
-
 
               {/* <button className="border-2 text-sm py-3 my-6 rounded-lg border-black">
                 Register here
