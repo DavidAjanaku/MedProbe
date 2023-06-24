@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../components/Logo";
 import { UserAuth } from "../context/AuthContext";
@@ -7,6 +7,7 @@ export default function SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const { createUser } = UserAuth();
   const handleSubmit = async (e) => {
@@ -14,6 +15,7 @@ export default function SignUpPage() {
     setError("");
     try {
       await createUser(email, password);
+      navigate("/home");
     } catch (e) {
       setError(e.message);
       console.log(e.message);
@@ -24,7 +26,7 @@ export default function SignUpPage() {
     <div className="font-acumin main-container ">
       <div className="wrapper-container grid grid-cols-1    overflow-hidden  md:grid-cols-2">
         {/* 1. IMAGE CONTAINER */}
-        <Logo />
+        <Logo isSignUp={true} />
 
         {/* 2. FORM CONTAINER */}
         <div className="main-form-container  my-12 mx-auto  w-4/5  md:w-3/5">

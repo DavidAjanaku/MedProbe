@@ -1,4 +1,7 @@
-const Logo = () => {
+// import React from 'react';
+// import PropTypes from "prop-types";
+
+const Logo = ({ isSignUp }) => {
   return (
     <div className="main-img-container bg-back hidden md:block">
       <div className="logo-div flex mx-20 my-4">
@@ -10,7 +13,11 @@ const Logo = () => {
         />
         <p className="text-2xl text-text-blue">medProbe</p>
       </div>
-      <img src="/assets/illustrations/man-searching.svg" alt="sign up image" />
+      {isSignUp ? (
+        <img src="/assets/illustrations/man-searching.svg" alt="sign up image" />
+      ) : (
+        <img src="/assets/illustrations/lady-searching.svg" alt="sign in image" />
+      )}
     </div>
   );
 };
