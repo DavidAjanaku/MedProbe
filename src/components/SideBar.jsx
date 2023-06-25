@@ -22,7 +22,7 @@ export default function SideBar() {
 <HistoryTile/>
 <HistoryTile/>
 </div>
-m
+
     </div>
   )
 }
