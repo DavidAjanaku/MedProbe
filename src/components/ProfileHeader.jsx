@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import settingsIcon from "/assets/illustrations/settings.png";
 import logoutIcon from "/assets/illustrations/log-out.png";
 import questionIcon from "/assets/illustrations/question.png";
@@ -9,9 +9,11 @@ import Hamburger from "./Hamburger";
 
 import DropdownItem from "./Dropdown";
 
-export default function ProfileHeader() {
+export default function ProfileHeader({ handleToggleSidebar }) {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
+  const [sidebarVisible, setSidebarVisible] = useState(false);
+
   const handleLogout = async () => {
     try {
       await logout();
@@ -52,20 +54,22 @@ export default function ProfileHeader() {
     // Remove the event listener when the component is unmounted
 
     return () => {
-      document.addEventListener("mousedown", handler);
+      document.removeEventListener("mousedown", handler);
     };
   });
+
+ 
+
   return (
     <div
       className="menu-container z-40 h-14 p-3  fixed left-0 right-0 top-0  bg-white	"
       ref={menuRef}
     >
       <div className="md:hidden">
-      <Hamburger/>
-
+        <Hamburger onClick={handleToggleSidebar} />
       </div>
       <div
-        className="menu-trigger "
+        className="menu-trigger"
         onClick={() => {
           setOpen(!open);
         }}

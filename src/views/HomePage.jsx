@@ -36,12 +36,10 @@ export default function HomePage() {
         <Link to="/signup">Sign Up</Link>
         <Link to="/Home">Home</Link>
       </nav>
-      <Header />
-      <div className="home-container bg-gray-100 p-3  mt-4  h-[90vh] flex">
+      <Header handleToggleSidebar={handleToggleSidebar} />
+      <div className="home-container bg-gray-100 p-3 mt-4 h-[90vh] flex">
         <div
-          className={`w-[20%] hidden md:block ${
-            sidebarVisible ? "block" : "hidden"
-          }`}
+          className={`w-[20%] md:block ${sidebarVisible ? "block" : "hidden"}`}
         >
           <SideBar />
         </div>
