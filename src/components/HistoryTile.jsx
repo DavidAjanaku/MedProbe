@@ -1,15 +1,15 @@
 import React from 'react'
 
-export default function HistoryTile() {
+export default function HistoryTile(props) {
   return (
     <div>
       <div>
-        <div className='flex  justify-between py-4 px-5 my-4 text-white bg-[#ffffff26;] border-white border-[1px] rounded-md'>
+        <div className='flex  justify-between py-4 px-5 my-4 text-white bg-[#ffffff26;] border-white border-[1px] rounded-md cursor-pointer '>
           <span>
             &#128172;
           </span>
           <span className="overflow-hidden whitespace-nowrap overflow-ellipsis w-[50%]">
-            ACUTE RESPIRATORY DISTRESS SYNDROME
+          {props.title}
           </span>
           <span>
           &#8595;

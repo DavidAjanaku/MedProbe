@@ -79,8 +79,8 @@ export default function ProfileHeader({ handleToggleSidebar }) {
           src="/assets/illustrations/profile pic boy.svg"
         />
       </div>
-      <div className={`dropdown-menu  ${open ? "active" : "inactive"}`}>
-        <h3>
+      <div className={`dropdown-menu   ${open ? "active" : "inactive"}`}>
+        <h3 className="break-words">
           Welcome <span>{user && user.email}</span>
         </h3>
         <ul>
