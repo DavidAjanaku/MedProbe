@@ -1,26 +1,44 @@
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo";
 import { UserAuth } from "../context/AuthContext";
-import { useState } from "react";
 
 export default function SignInPage() {
   const navigate = useNavigate();
   const { signIn } = UserAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError("");
+    setSuccessMessage("");
+    setErrorMessage("");
     try {
       await signIn(email, password);
-      navigate("/home");
+      setSuccessMessage("Sign in successful");
+      console.log("Success");
+      setTimeout(() => {
+        setSuccessMessage("");
+        navigate("/home");
+      }, 2000); // Display for 2 seconds (2000 milliseconds)
     } catch (e) {
-      setError(e.message);
-      console.log(e.message);
+      setErrorMessage("Incorrect email or password");
+      setTimeout(() => {
+        setErrorMessage("");
+        console.log("Error");
+      }, 2000); // Display for 2 seconds (2000 milliseconds)
     }
   };
+
+  useEffect(() => {
+    // Cleanup function
+    return () => {
+      setSuccessMessage("");
+      setErrorMessage("");
+    };
+  }, []);
 
   return (
     <div className="font-acumin main-container ">
@@ -74,11 +92,11 @@ export default function SignInPage() {
           "
               />
 
-              <div className="flex justify-between  items-center  flex-wrap">
-                <div>
+              <div className="flex justify-between  items-center flex-wrap">
+                {/* <div>
                   <input type="checkbox" id="checkbox" />
                   <label>I agree to the terms and conditions</label>
-                </div>
+                </div> */}
                 <button className="rounded-md bg-medium-blue py-3 px-6 text-white text-sm flex items-center my-4 w-32">
                   Sign In
                   <svg
@@ -137,6 +155,29 @@ export default function SignInPage() {
             </form>
           </div>
         </div>
+
+        {/* Success message */}
+        {successMessage && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-green-500 text-white p-4 rounded-md">
+              {successMessage}
+            </div>
+          </div>
+        )}
+
+        {/* Error message */}
+        {errorMessage && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-red-500 text-white p-4 rounded-md">
+              {errorMessage}
+            </div>
+          </div>
+        )}
+
+        {/* Blur background */}
+        {(successMessage || errorMessage) && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 z-40"></div>
+        )}
       </div>
     </div>
   );
