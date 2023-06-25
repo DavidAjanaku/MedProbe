@@ -4,7 +4,7 @@ export default function HistoryTile() {
   return (
     <div>
       <div>
-        <div className='flex  justify-between py-4 px-5 my-4 text-white bg-[#ffffff26;] border-white border-[1px] rounded-md cursor-pointer'>
+        <div className='flex  justify-between py-4 px-5 my-4 text-white bg-[#ffffff26;] border-white border-[1px] rounded-md'>
           <span>
             &#128172;
           </span>

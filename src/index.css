@@ -93,6 +93,15 @@
     transition: var(--speed);
   }
 
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
   ul{
     list-style: none;
   }
